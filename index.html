@@ -1,0 +1,47 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<div id="writeHere">
+</div>
+<button id="trigger" type="button">Click here to End Racist</button>
+<script>
+  document.getElementById("trigger").addEventListener("click", write);
+  function write(){
+    let vowels = ['a', 'e', 'o', 'u'];
+    let vowel1='a';
+    let vowel2='e';
+
+    for (let i=0;i<10;i++) {
+      vowel1=vowel1.concat(vowels[Math.floor(Math.random() * 4)]);
+      vowel2=vowel2.concat(vowels[Math.floor(Math.random() * 4)]);
+    }
+    let res = 'Y'+vowel1+'H' + vowel2
+    document.getElementById("writeHere").innerHTML = res;
+  }
+</script>
+</body>
+
+</html>
